@@ -1,4 +1,4 @@
-import heroImage from '../assets/hero.png'
+import AsciiPortrait from "./AsciiPortrait";
 
 function Hero({ profile }) {
   return (
@@ -21,18 +21,30 @@ function Hero({ profile }) {
         </div>
 
         <div className="hero-socials" aria-label="Profile links">
-          <a href={profile.github} target="_blank" rel="noreferrer">GitHub</a>
-          <a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href={profile.leetcode} target="_blank" rel="noreferrer">LeetCode</a>
+          <a href={profile.github} target="_blank" rel="noreferrer">
+            GitHub
+          </a>
+          <a href={profile.linkedin} target="_blank" rel="noreferrer">
+            LinkedIn
+          </a>
+          <a href={profile.leetcode} target="_blank" rel="noreferrer">
+            LeetCode
+          </a>
           {profile.codolio && (
-            <a href={profile.codolio} target="_blank" rel="noreferrer">Codolio</a>
+            <a href={profile.codolio} target="_blank" rel="noreferrer">
+              Codolio
+            </a>
           )}
         </div>
       </div>
 
       <div className="hero-panel">
-        <div className="hero-visual" aria-hidden="true">
-          <img src={heroImage} alt="" />
+        <div className="hero-visual">
+          <img
+            src="/images/hero-static.png"
+            alt="Portrait"
+            className="hero-static-image"
+          />
         </div>
         <div className="hero-note">
           <span>Frontend focus</span>
@@ -40,7 +52,7 @@ function Hero({ profile }) {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Hero
+export default Hero;

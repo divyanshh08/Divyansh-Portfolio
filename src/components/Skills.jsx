@@ -1,39 +1,28 @@
-function Skills({ projects }) {
-  const skills = [...new Set(projects.flatMap((project) => project.technologies))]
-  const skillGroups = [
-    {
-      title: 'Project stack',
-      description: 'Technologies currently represented in the projects data.',
-      items: skills,
-    },
-  ]
+import { skills } from '../data/skills'
 
+function Skills() {
   return (
     <section className="section skills-section" id="skills">
       <div className="section-heading">
-        <p className="eyebrow">Skills</p>
-        <h2>Current tools, kept honest by project data.</h2>
+        <p className="eyebrow">Technologies & Tools</p>
+        <h2>Tools I use to build and learn.</h2>
       </div>
 
       <div className="skill-groups">
-        {skillGroups.map((group) => (
+        {skills.map((group) => (
           <article className="skill-panel" key={group.title}>
             <div>
               <p>{group.title}</p>
               <span>{group.description}</span>
             </div>
 
-            {group.items.length > 0 ? (
-              <div className="skill-list" aria-label={group.title}>
-                {group.items.map((skill) => (
-                  <span className="skill-pill" key={skill}>
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            ) : (
-              <p className="muted-text">Add technologies to your projects data.</p>
-            )}
+            <div className="skill-list" aria-label={group.title}>
+              {group.items.map((skill) => (
+                <span className="skill-pill" key={skill}>
+                  {skill}
+                </span>
+              ))}
+            </div>
           </article>
         ))}
       </div>

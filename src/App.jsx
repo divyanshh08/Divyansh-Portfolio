@@ -18,7 +18,7 @@ function App() {
       <main>
         <Hero profile={profile} />
         <About profile={profile} />
-        <Skills projects={projects} />
+        <Skills />
         <Projects projects={projects} />
         <CodingActivity profile={profile} activity={codingActivity} />
         <Contact profile={profile} />
