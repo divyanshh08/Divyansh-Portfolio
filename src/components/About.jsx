@@ -7,11 +7,14 @@ function About({ profile }) {
       </div>
 
       <div className="about-layout">
-        <p className="lead-text">{profile.tagline}</p>
-        <p>
-          I am based in {profile.location}. This portfolio is set up to keep my
-          work, links, and learning progress organized in one place.
-        </p>
+        <div className="about-copy">
+          <p className="lead-text">{profile.tagline}</p>
+          <p>
+            I am based in {profile.location}. This portfolio keeps my project
+            work, developer profiles, and resume in one focused place.
+          </p>
+        </div>
+
         <dl className="profile-list">
           <div>
             <dt>Role</dt>
@@ -28,6 +31,15 @@ function About({ profile }) {
             </dd>
           </div>
         </dl>
+
+        <div className="profile-links" aria-label="Profile links">
+          <a href={profile.github} target="_blank" rel="noreferrer">GitHub</a>
+          <a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href={profile.leetcode} target="_blank" rel="noreferrer">LeetCode</a>
+          {profile.codolio && (
+            <a href={profile.codolio} target="_blank" rel="noreferrer">Codolio</a>
+          )}
+        </div>
       </div>
     </section>
   )

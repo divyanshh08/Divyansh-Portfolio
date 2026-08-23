@@ -24,6 +24,9 @@ function Hero({ profile }) {
           <a href={profile.github} target="_blank" rel="noreferrer">GitHub</a>
           <a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
           <a href={profile.leetcode} target="_blank" rel="noreferrer">LeetCode</a>
+          {profile.codolio && (
+            <a href={profile.codolio} target="_blank" rel="noreferrer">Codolio</a>
+          )}
         </div>
       </div>
 
@@ -32,8 +35,8 @@ function Hero({ profile }) {
           <img src={heroImage} alt="" />
         </div>
         <div className="hero-note">
-          <span>Portfolio focus</span>
-          <strong>Modern interfaces with clean frontend fundamentals.</strong>
+          <span>Frontend focus</span>
+          <strong>{profile.tagline}</strong>
         </div>
       </div>
     </section>

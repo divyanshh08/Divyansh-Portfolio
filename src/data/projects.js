@@ -5,8 +5,7 @@ export const projects = [
         technologies: ["HTML", "CSS", "JavaScript"],
         github: "https://github.com/divyanshh08/Kanban-Board-Javascript",
         live: "https://github.com/divyanshh08/Kanban-Board-Javascript",
-        image: ""
-        // image: "/projects/kanban.png"
+        image: "/projects/kanban.png"
     },
 
     {
@@ -15,6 +14,6 @@ export const projects = [
         technologies: ["HTML", "CSS", "JavaScript"],
         github: "https://github.com/divyanshh08/Snake-Game-JavaScript",
         live: "https://github.com/divyanshh08/Snake-Game-JavaScript",
-        image: ""
+        image: "/projects/snake.png"
     }
 ];

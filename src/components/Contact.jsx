@@ -7,7 +7,8 @@ function Contact({ profile }) {
         <p className="eyebrow">Contact</p>
         <h2>Let&apos;s connect.</h2>
         <p className="contact-copy">
-          Reach me directly by email or through my developer profiles.
+          Reach me directly by email or through the profiles where I share code
+          and coding progress.
         </p>
       </div>
 

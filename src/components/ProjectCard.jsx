@@ -11,7 +11,7 @@ function ProjectCard({ project, isFeatured }) {
     <article className={isFeatured ? 'project-card project-card-featured' : 'project-card'}>
       <div className="project-media">
         {hasImage ? (
-          <img src={project.image} alt={`${project.title} preview`} />
+          <img src={project.image} alt={`${project.title} screenshot`} />
         ) : (
           <div className="project-placeholder" aria-label={`${project.title} preview not added`}>
             <span>{project.title.slice(0, 2)}</span>
@@ -34,7 +34,7 @@ function ProjectCard({ project, isFeatured }) {
         <div className="project-links">
           {/* Props let this card receive different project data without duplicating JSX. */}
           {hasGithub && (
-            <a href={project.github} target="_blank" rel="noreferrer">
+            <a className="project-link-primary" href={project.github} target="_blank" rel="noreferrer">
               GitHub
             </a>
           )}
