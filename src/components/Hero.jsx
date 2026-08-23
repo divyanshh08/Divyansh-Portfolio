@@ -1,0 +1,43 @@
+import heroImage from '../assets/hero.png'
+
+function Hero({ profile }) {
+  return (
+    <section className="hero-section" id="hero">
+      <div className="hero-copy">
+        <p className="eyebrow">Available from {profile.location}</p>
+        <h1>
+          {profile.name}
+          <span>{profile.title}</span>
+        </h1>
+        <p className="hero-tagline">{profile.tagline}</p>
+
+        <div className="hero-actions" aria-label="Primary links">
+          <a className="button button-primary" href="#projects">
+            See projects
+          </a>
+          <a className="button button-secondary" href="#contact">
+            Get in touch
+          </a>
+        </div>
+
+        <div className="hero-socials" aria-label="Profile links">
+          <a href={profile.github} target="_blank" rel="noreferrer">GitHub</a>
+          <a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href={profile.leetcode} target="_blank" rel="noreferrer">LeetCode</a>
+        </div>
+      </div>
+
+      <div className="hero-panel">
+        <div className="hero-visual" aria-hidden="true">
+          <img src={heroImage} alt="" />
+        </div>
+        <div className="hero-note">
+          <span>Portfolio focus</span>
+          <strong>Modern interfaces with clean frontend fundamentals.</strong>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default Hero
