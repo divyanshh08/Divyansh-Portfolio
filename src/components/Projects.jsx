@@ -7,8 +7,7 @@ function Projects({ projects }) {
         <p className="eyebrow">Projects</p>
         <h2>Practical browser projects, presented directly from data.</h2>
         <p>
-          Each project card is rendered from <code>src/data/projects.js</code>,
-          so screenshots, links, and technologies stay easy to update.
+          A selection of projects built to explore ideas, solve problems, and strengthen my development skills.
         </p>
       </div>
 

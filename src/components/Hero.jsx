@@ -41,7 +41,7 @@ function Hero({ profile }) {
       <div className="hero-panel">
         <div className="hero-visual">
           <img
-            src="/images/hero-static.png"
+            src="/images/portrait.png"
             alt="Portrait"
             className="hero-static-image"
           />
